@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: raspberry-pi
+  role_name: raspberry_pi
   author: kcir
   description: Install packages for Raspberry Pi
   company: NA
