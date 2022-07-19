@@ -1,0 +1,13 @@
+---
+- name: Check if this is a Raspberry Pi
+  set_fact:
+    raspberrypi: true
+  when: ansible_kernel is search("raspi")
+
+- name: Make sure linux-modules-extra-raspi is installed
+  ansible.builtin.apt:
+    name: linux-modules-extra-raspi
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+  when: raspberrypi is defined and raspberrypi
