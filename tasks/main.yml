@@ -1,6 +1,6 @@
 ---
 - name: Check if this is a Raspberry Pi
-  set_fact:
+  ansible.builtin.set_fact:
     raspberrypi: true
   when: ansible_kernel is search("raspi")
 
